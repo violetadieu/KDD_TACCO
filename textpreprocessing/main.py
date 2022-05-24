@@ -49,8 +49,22 @@ if __name__=="__main__":
         result['functionMattr']=TTR.functionMattr(wordsAfterLemma,kkma)
             #nounTtr
         result['nounTtr']=TTR.nounTtr(wordsAfterLemma,kkma)
-            #nounTtr
+            #verbTtr
         result['verbTtr'] = TTR.verbTtr(wordsAfterLemma, kkma)
+            #adjTtr
+        result['adjTtr'] = TTR.adjTtr(wordsAfterLemma, kkma)
+            #advTtr
+        result['advTtr'] = TTR.advTtr(wordsAfterLemma, kkma)
+            #prpTtr 대명사는 나중에~
+        result['prpTtr'] = TTR.prpTtr(wordsAfterLemma, kkma)
+            #argumentTtr 대명사는 나중에~
+        result['argumentTtr'] = TTR.argumentTtr(wordsAfterLemma, kkma)
+            #advTtr
+        result['bigramLemmaTtr'] = TTR.bigramLemmaTtr(wordsAfterLemma)
+            #advTtr
+        result['trigramLemmaTtr'] = TTR.trigramLemmaTtr(wordsAfterLemma)
+
+
         #connectives
 
         #기타(LSA, LDA, word2vec)

@@ -138,25 +138,57 @@ def verbTtr(words,kkma):
     return len(type) / totalCnt
 
 
-def adjTtr():
+def adjTtr(words,kkma):
+    type = collections.defaultdict(int)
+    totalCnt = 0
+
+    for word in words:
+        pos = kkma.pos(word)
+        for morp in pos:
+            if "VXA" in morp[1] or "VA" in morp[1]:
+                type[morp[0]] = type[morp[0]] + 1
+                totalCnt += 1
+
+    return len(type) / totalCnt
+
+def advTtr(words,kkma):
+    type = collections.defaultdict(int)
+    totalCnt = 0
+
+    for word in words:
+        pos = kkma.pos(word)
+        for morp in pos:
+            if "MAG" in morp[1] or "MAJ" in morp[1]:
+                type[morp[0]] = type[morp[0]] + 1
+                totalCnt += 1
+
+    return len(type) / totalCnt
+
+#대명사는 나중에~
+def prpTtr(words,kkma):
+    return 0
+
+#명사와 대명사, 대명사는 나중에~
+def argumentTtr(words,kkma):
     return 0
 
 
-def advTtr():
-    return 0
+def bigramLemmaTtr(words):
+
+    n=2
+    ngrams = []
+    for b in range(0, len(words) - n + 1):
+        ngrams.append(tuple(words[b:b + n]))
+    uniquengrams=set(ngrams)
+
+    return len(uniquengrams)/len(ngrams)
 
 
-def prpTtr():
-    return 0
+def trigramLemmaTtr(words):
+    n = 3
+    ngrams = []
+    for b in range(0, len(words) - n + 1):
+        ngrams.append(tuple(words[b:b + n]))
+    uniquengrams = set(ngrams)
 
-
-def argumentTtr():
-    return 0
-
-
-def bigramLemmaTtr():
-    return 0
-
-
-def trigramLemmaTtr():
-    return 0
+    return len(uniquengrams) / len(ngrams)
