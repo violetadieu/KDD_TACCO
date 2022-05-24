@@ -6,6 +6,7 @@ import collections
 import time
 
 import konlpy
+from konlpy.tag import Kkma
 
 import textpreprocess
 import TTR
@@ -16,6 +17,8 @@ if __name__=="__main__":
     data=pd.read_csv("data/train.csv")
     data=data["text"].to_list()
     data.sort(key=len)
+
+    kkma=Kkma()
 
     for text in data:
         result=collections.defaultdict()
@@ -35,15 +38,19 @@ if __name__=="__main__":
             #lemma_mattr
         result['lemmaMattr']=TTR.lemmaMattr(wordsAfterLemma)
             #lexical_density_tokens
-        result['lexicalDensityTokens']=TTR.lexicalDensityTokens(wordsAfterLemma)
+        result['lexicalDensityTokens']=TTR.lexicalDensityTokens(wordsAfterLemma,kkma)
             #lexical_density_tokens
-        result['lexicalDensityTypes'] = TTR.lexicalDensityTypes(wordsAfterLemma)
-            #contenTtr
-        result['contentTtr']=TTR.contentTtr(wordsAfterLemma)
-        #overlap
-
-        #pronoun
-
+        result['lexicalDensityTypes'] = TTR.lexicalDensityTypes(wordsAfterLemma,kkma)
+            #contentTtr
+        result['contentTtr']=TTR.contentTtr(wordsAfterLemma,kkma)
+            #functionTtr
+        result['functionTtr']=TTR.functionTtr(wordsAfterLemma,kkma)
+            #functionMattr
+        result['functionMattr']=TTR.functionMattr(wordsAfterLemma,kkma)
+            #nounTtr
+        result['nounTtr']=TTR.nounTtr(wordsAfterLemma,kkma)
+            #nounTtr
+        result['verbTtr'] = TTR.verbTtr(wordsAfterLemma, kkma)
         #connectives
 
         #기타(LSA, LDA, word2vec)
