@@ -11,6 +11,8 @@ from konlpy.tag import Kkma
 import textpreprocess
 import TTR
 import adjacent_overlap
+import similarity
+import synonym
 
 if __name__=="__main__":
     #data 가저오기
@@ -68,7 +70,6 @@ if __name__=="__main__":
         for idx in range(len(sentences)-1):
             result['adjacent_overlap_all_sent']+=\
                 adjacent_overlap.adjacent_overlap_all_sent(sentences[idx],sentences[idx+1],kkma)
-
 
         #connectives
 
