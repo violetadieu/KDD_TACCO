@@ -14,9 +14,8 @@ import adjacent_overlap
 
 if __name__=="__main__":
     #data 가저오기
-    data=pd.read_csv("data/train.csv")
+    data=pd.read_csv("data/일반.csv")
     data=data["text"].to_list()
-    data.sort(key=len)
 
     kkma=Kkma()
 
