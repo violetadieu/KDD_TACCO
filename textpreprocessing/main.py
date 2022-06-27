@@ -10,7 +10,7 @@ from konlpy.tag import Kkma
 
 import textpreprocess
 import TTR
-
+import adjacent_overlap
 
 if __name__=="__main__":
     #data 가저오기
@@ -63,6 +63,12 @@ if __name__=="__main__":
         result['bigramLemmaTtr'] = TTR.bigramLemmaTtr(wordsAfterLemma)
             #advTtr
         result['trigramLemmaTtr'] = TTR.trigramLemmaTtr(wordsAfterLemma)
+
+        #adjacent_overlap
+        result['adjacent_overlap_all_sent']=0
+        for idx in range(len(sentences)-1):
+            result['adjacent_overlap_all_sent']+=\
+                adjacent_overlap.adjacent_overlap_all_sent(sentences[idx],sentences[idx+1],kkma)
 
 
         #connectives

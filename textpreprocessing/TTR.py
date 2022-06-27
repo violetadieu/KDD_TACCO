@@ -67,7 +67,10 @@ def contentTtr(words, kkma):
         pos = kkma.pos(word)
         for morp in pos:
             if "NN" in morp[1] or "V" in morp[1] or "MA" in morp[1]:
-                type[morp[0]] = type[morp[0]] + 1
+                try:
+                    type[morp[0]] = type[morp[0]] + 1
+                except:
+                    type[morp[0]]=0
                 totalCnt += 1
 
     return len(type) / totalCnt

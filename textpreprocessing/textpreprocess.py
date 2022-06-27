@@ -15,9 +15,9 @@ def splitText(text):
 
 # 단어 단위 분할
 
-def splitSen(sentence):
+def splitSen(sentences):
     words=collections.deque()
-    for sen in sentence:
+    for sen in sentences:
         tmp = sen.split(" ")
         for item in tmp:
             words.append(item)
