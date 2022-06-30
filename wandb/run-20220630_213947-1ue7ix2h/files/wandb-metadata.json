@@ -1,0 +1,23 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.7.11",
+    "heartbeatAt": "2022-06-30T12:39:49.286903",
+    "startedAt": "2022-06-30T12:39:47.737125",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "Desktop/github repo/KDD_TACCO/SentenceBERT.ipynb",
+    "root": "C:/Users/DESKTOP/Desktop/github repo/KDD_TACCO",
+    "git": {
+        "remote": "https://github.com/violetadieu/KDD_TACCO.git",
+        "commit": "968b5a6dbf71acae8d6f697de74c3089e628a952"
+    },
+    "email": "akxldk2@naver.com",
+    "host": "DESKTOP-T5HO3AI",
+    "username": "DESKTOP",
+    "executable": "C:\\Users\\DESKTOP\\anaconda3\\envs\\a2\\python.exe"
+}

@@ -1,0 +1,240 @@
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source. If sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running training *****
+  Num examples = 11668
+  Num Epochs = 5
+  Instantaneous batch size per device = 128
+  Total train batch size (w. parallel, distributed & accumulation) = 128
+  Gradient Accumulation steps = 1
+  Total optimization steps = 460
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source. If sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running training *****
+  Num examples = 11668
+  Num Epochs = 5
+  Instantaneous batch size per device = 128
+  Total train batch size (w. parallel, distributed & accumulation) = 128
+  Gradient Accumulation steps = 1
+  Total optimization steps = 460
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source. If sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running training *****
+  Num examples = 11668
+  Num Epochs = 5
+  Instantaneous batch size per device = 128
+  Total train batch size (w. parallel, distributed & accumulation) = 128
+  Gradient Accumulation steps = 1
+  Total optimization steps = 460
+Reusing dataset klue (C:\Users\DESKTOP\.cache\huggingface\datasets\klue\sts\1.0.0\e0fc3bc3de3eb03be2c92d72fd04a60ecc71903f821619cb28ca0e1e29e4233e)
+loading configuration file https://huggingface.co/klue/bert-base/resolve/main/config.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\fbd0b2ef898c4653902683fea8cc0dd99bf43f0e082645b913cda3b92429d1bb.99b3298ed554f2ad731c27cdb11a6215f39b90bc845ff5ce709bb4e74ba45621
+Model config BertConfig {
+  "_name_or_path": "klue/bert-base",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.19.2",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 32000
+}
+loading file https://huggingface.co/klue/bert-base/resolve/main/vocab.txt from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\1a36e69d48a008e522b75e43693002ffc8b6e6df72de7c53412c23466ec165eb.085110015ec67fc02ad067f712a7c83aafefaf31586a3361dd800bcac635b456
+loading file https://huggingface.co/klue/bert-base/resolve/main/tokenizer.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\310a974e892b181d75eed58b545cc0592d066ae4ef35cc760ea92e9b0bf65b3b.74f7933572f937b11a02b2cfb4e88a024059be36c84f53241b85b1fec49e21f7
+loading file https://huggingface.co/klue/bert-base/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/klue/bert-base/resolve/main/special_tokens_map.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\aeaaa3afd086a040be912f92ffe7b5f85008b744624f4517c4216bcc32b51cf0.054ece8d16bd524c8a00f0e8a976c00d5de22a755ffb79e353ee2954d9289e26
+loading file https://huggingface.co/klue/bert-base/resolve/main/tokenizer_config.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\f8f71eb411bb03f57b455cfb1b4e04ae124201312e67a3ad66e0a92d0c228325.78871951edcb66032caa0a9628d77b3557c23616c653dacdb7a1a8f33011a843
+loading configuration file https://huggingface.co/klue/bert-base/resolve/main/config.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\fbd0b2ef898c4653902683fea8cc0dd99bf43f0e082645b913cda3b92429d1bb.99b3298ed554f2ad731c27cdb11a6215f39b90bc845ff5ce709bb4e74ba45621
+Model config BertConfig {
+  "_name_or_path": "klue/bert-base",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.19.2",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 32000
+}
+Loading cached processed dataset at C:\Users\DESKTOP\.cache\huggingface\datasets\klue\sts\1.0.0\e0fc3bc3de3eb03be2c92d72fd04a60ecc71903f821619cb28ca0e1e29e4233e\cache-e0df4ba1fe6496d0.arrow
+Loading cached processed dataset at C:\Users\DESKTOP\.cache\huggingface\datasets\klue\sts\1.0.0\e0fc3bc3de3eb03be2c92d72fd04a60ecc71903f821619cb28ca0e1e29e4233e\cache-cce0e843b2844e90.arrow
+loading configuration file https://huggingface.co/klue/bert-base/resolve/main/config.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\fbd0b2ef898c4653902683fea8cc0dd99bf43f0e082645b913cda3b92429d1bb.99b3298ed554f2ad731c27cdb11a6215f39b90bc845ff5ce709bb4e74ba45621
+Model config BertConfig {
+  "_name_or_path": "klue/bert-base",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.19.2",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 32000
+}
+loading weights file https://huggingface.co/klue/bert-base/resolve/main/pytorch_model.bin from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\05b36ee62545d769939a7746eca739b844a40a7a7553700f110b58b28ed6a949.7cb231256a5dbe886e12b902d05cb1241f330d8c19428508f91b2b28c1cfe0b6
+Some weights of the model checkpoint at klue/bert-base were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.bias', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at klue/bert-base and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+PyTorch: setting up devices
+Login successful
+Your token has been saved to C:\Users\DESKTOP/.huggingface/token
+[31m[1mAuthenticated through git-credential store but this isn't the helper defined on your machine.
+[31m[1mYou might have to re-authenticate when pushing to the Hugging Face Hub. Run the following command in your terminal in case you want to set this credential helper as the default
+[31m[1mgit config --global credential.helper store
+loading configuration file https://huggingface.co/klue/bert-base/resolve/main/config.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\fbd0b2ef898c4653902683fea8cc0dd99bf43f0e082645b913cda3b92429d1bb.99b3298ed554f2ad731c27cdb11a6215f39b90bc845ff5ce709bb4e74ba45621
+Model config BertConfig {
+  "_name_or_path": "klue/bert-base",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.19.2",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 32000
+}
+loading file https://huggingface.co/klue/bert-base/resolve/main/vocab.txt from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\1a36e69d48a008e522b75e43693002ffc8b6e6df72de7c53412c23466ec165eb.085110015ec67fc02ad067f712a7c83aafefaf31586a3361dd800bcac635b456
+loading file https://huggingface.co/klue/bert-base/resolve/main/tokenizer.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\310a974e892b181d75eed58b545cc0592d066ae4ef35cc760ea92e9b0bf65b3b.74f7933572f937b11a02b2cfb4e88a024059be36c84f53241b85b1fec49e21f7
+loading file https://huggingface.co/klue/bert-base/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/klue/bert-base/resolve/main/special_tokens_map.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\aeaaa3afd086a040be912f92ffe7b5f85008b744624f4517c4216bcc32b51cf0.054ece8d16bd524c8a00f0e8a976c00d5de22a755ffb79e353ee2954d9289e26
+loading file https://huggingface.co/klue/bert-base/resolve/main/tokenizer_config.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\f8f71eb411bb03f57b455cfb1b4e04ae124201312e67a3ad66e0a92d0c228325.78871951edcb66032caa0a9628d77b3557c23616c653dacdb7a1a8f33011a843
+loading configuration file https://huggingface.co/klue/bert-base/resolve/main/config.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\fbd0b2ef898c4653902683fea8cc0dd99bf43f0e082645b913cda3b92429d1bb.99b3298ed554f2ad731c27cdb11a6215f39b90bc845ff5ce709bb4e74ba45621
+Model config BertConfig {
+  "_name_or_path": "klue/bert-base",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.19.2",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 32000
+}
+Loading cached processed dataset at C:\Users\DESKTOP\.cache\huggingface\datasets\klue\sts\1.0.0\e0fc3bc3de3eb03be2c92d72fd04a60ecc71903f821619cb28ca0e1e29e4233e\cache-9b59b9325a117107.arrow
+loading configuration file https://huggingface.co/klue/bert-base/resolve/main/config.json from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\fbd0b2ef898c4653902683fea8cc0dd99bf43f0e082645b913cda3b92429d1bb.99b3298ed554f2ad731c27cdb11a6215f39b90bc845ff5ce709bb4e74ba45621
+Model config BertConfig {
+  "_name_or_path": "klue/bert-base",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.19.2",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 32000
+}
+loading weights file https://huggingface.co/klue/bert-base/resolve/main/pytorch_model.bin from cache at C:\Users\DESKTOP/.cache\huggingface\transformers\05b36ee62545d769939a7746eca739b844a40a7a7553700f110b58b28ed6a949.7cb231256a5dbe886e12b902d05cb1241f330d8c19428508f91b2b28c1cfe0b6
+Some weights of the model checkpoint at klue/bert-base were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.bias', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at klue/bert-base and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+PyTorch: setting up devices
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source. If sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running training *****
+  Num examples = 11668
+  Num Epochs = 5
+  Instantaneous batch size per device = 1
+  Total train batch size (w. parallel, distributed & accumulation) = 1
+  Gradient Accumulation steps = 1
+  Total optimization steps = 58340
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+PyTorch: setting up devices
+PyTorch: setting up devices
+PyTorch: setting up devices
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source. If sentence1, labels.binary-label, labels.label, sentence2, labels.real-label, guid, source are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running training *****
+  Num examples = 11668
+  Num Epochs = 5
+  Instantaneous batch size per device = 1
+  Total train batch size (w. parallel, distributed & accumulation) = 1
+  Gradient Accumulation steps = 1
+  Total optimization steps = 58340
+Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
