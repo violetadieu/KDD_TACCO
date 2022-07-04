@@ -99,16 +99,16 @@ def functionMattr(words,kkma):
     cnt = 0
     while idx <= len(words):
         type = collections.defaultdict(int)
-        len=0
+        leng=0
         ttrList = words[idx:idx + 50]
         for word in ttrList:
             pos = kkma.pos(word)
-            len+=len(pos)
+            leng+=len(pos)
             for morp in pos:
                 if ("J" in morp[1] or "E" in morp[1]) and (morp[1] != "MAJ" or morp[1] != "SE"):
                     type[morp[0]] = type[morp[0]] + 1
         cnt += 1
-        ttr += len(type) / len
+        ttr += len(type) / leng
         idx += 50
 
     return ttr / cnt

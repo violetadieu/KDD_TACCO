@@ -40,7 +40,7 @@ def adjacent_sentence_overlap_all_lemmas_normed(now,target,kkma):
 
 def binary_adjacent_sentence_overlap_all_lemmas(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -56,8 +56,8 @@ def binary_adjacent_sentence_overlap_all_lemmas(now,target,kkma):
 
 def adjacent_two_sentence_overlap_all_lemmas(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
 
     sum = 0
@@ -84,8 +84,8 @@ def adjacent_two_sentence_overlap_all_lemmas(now,target1,target2,kkma):
 
 def adjacent_two_sentence_overlap_all_lemmas_normed(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag=False
 
@@ -114,8 +114,8 @@ def adjacent_two_sentence_overlap_all_lemmas_normed(now,target1,target2,kkma):
 
 def binary_adjacent_two_sentence_overlap_all_lemmas(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -146,7 +146,7 @@ def binary_adjacent_two_sentence_overlap_all_lemmas(now,target1,target2,kkma):
 #content lemmas
 def adjacent_sentence_overlap_content_lemmas(now, target, kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
     sum = 0
 
@@ -166,7 +166,7 @@ def adjacent_sentence_overlap_content_lemmas(now, target, kkma):
 
 def adjacent_sentence_overlap_content_lemmas_normed(now, target, kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -183,7 +183,7 @@ def adjacent_sentence_overlap_content_lemmas_normed(now, target, kkma):
 
 def binary_adjacent_sentence_overlap_content_lemmas(now, target, kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -200,8 +200,8 @@ def binary_adjacent_sentence_overlap_content_lemmas(now, target, kkma):
 
 def adjacent_two_sentence_overlap_content_lemmas(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
 
     sum = 0
@@ -229,8 +229,8 @@ def adjacent_two_sentence_overlap_content_lemmas(now,target1,target2,kkma):
 
 def adjacent_two_sentence_overlap_content_lemmas_normed(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -260,8 +260,8 @@ def adjacent_two_sentence_overlap_content_lemmas_normed(now,target1,target2,kkma
 
 def binary_adjacent_two_sentence_overlap_content_lemmas(now,target1, target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -293,7 +293,7 @@ def binary_adjacent_two_sentence_overlap_content_lemmas(now,target1, target2,kkm
 #function lemmas
 def adjacent_sentence_overlap_function_lemmas(now, target, kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
     sum = 0
 
@@ -313,7 +313,7 @@ def adjacent_sentence_overlap_function_lemmas(now, target, kkma):
 
 def adjacent_sentence_overlap_function_lemmas_normed(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -330,7 +330,7 @@ def adjacent_sentence_overlap_function_lemmas_normed(now,target,kkma):
 
 def binary_adjacent_sentence_overlap_function_lemmas(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -347,8 +347,8 @@ def binary_adjacent_sentence_overlap_function_lemmas(now,target,kkma):
 
 def adjacent_two_sentence_overlap_function_lemmas(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
 
     sum = 0
@@ -376,8 +376,8 @@ def adjacent_two_sentence_overlap_function_lemmas(now,target1,target2,kkma):
 
 def adjacent_two_sentence_overlap_function_lemmas_normed(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -407,8 +407,8 @@ def adjacent_two_sentence_overlap_function_lemmas_normed(now,target1,target2,kkm
 
 def binary_adjacent_two_sentence_overlap_function_lemmas(now,target1, target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -440,7 +440,7 @@ def binary_adjacent_two_sentence_overlap_function_lemmas(now,target1, target2,kk
 #noun lemmas
 def adjacent_sentence_overlap_noun_lemmas(now, target, kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
     sum = 0
 
@@ -460,7 +460,7 @@ def adjacent_sentence_overlap_noun_lemmas(now, target, kkma):
 
 def adjacent_sentence_overlap_noun_lemmas_normed(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -477,7 +477,7 @@ def adjacent_sentence_overlap_noun_lemmas_normed(now,target,kkma):
 
 def binary_adjacent_sentence_overlap_noun_lemmas(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -494,8 +494,8 @@ def binary_adjacent_sentence_overlap_noun_lemmas(now,target,kkma):
 
 def adjacent_two_sentence_overlap_noun_lemmas(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
 
     sum = 0
@@ -523,8 +523,8 @@ def adjacent_two_sentence_overlap_noun_lemmas(now,target1,target2,kkma):
 
 def adjacent_two_sentence_overlap_noun_lemmas_normed(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -554,8 +554,8 @@ def adjacent_two_sentence_overlap_noun_lemmas_normed(now,target1,target2,kkma):
 
 def binary_adjacent_two_sentence_overlap_noun_lemmas(now,target1, target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -587,7 +587,7 @@ def binary_adjacent_two_sentence_overlap_noun_lemmas(now,target1, target2,kkma):
 #verb lemmas
 def adjacent_sentence_overlap_verb_lemmas(now, target, kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
     sum = 0
 
@@ -607,7 +607,7 @@ def adjacent_sentence_overlap_verb_lemmas(now, target, kkma):
 
 def adjacent_sentence_overlap_verb_lemmas_normed(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -624,7 +624,7 @@ def adjacent_sentence_overlap_verb_lemmas_normed(now,target,kkma):
 
 def binary_adjacent_sentence_overlap_verb_lemmas(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -641,8 +641,8 @@ def binary_adjacent_sentence_overlap_verb_lemmas(now,target,kkma):
 
 def adjacent_two_sentence_overlap_verb_lemmas(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
 
     sum = 0
@@ -670,8 +670,8 @@ def adjacent_two_sentence_overlap_verb_lemmas(now,target1,target2,kkma):
 
 def adjacent_two_sentence_overlap_verb_lemmas_normed(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -701,8 +701,8 @@ def adjacent_two_sentence_overlap_verb_lemmas_normed(now,target1,target2,kkma):
 
 def binary_adjacent_two_sentence_overlap_verb_lemmas(now,target1, target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -734,7 +734,7 @@ def binary_adjacent_two_sentence_overlap_verb_lemmas(now,target1, target2,kkma):
 #adjective lemmas
 def adjacent_sentence_overlap_adjective_lemmas(now, target, kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
     sum = 0
 
@@ -754,7 +754,7 @@ def adjacent_sentence_overlap_adjective_lemmas(now, target, kkma):
 
 def adjacent_sentence_overlap_adjective_lemmas_normed(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -771,7 +771,7 @@ def adjacent_sentence_overlap_adjective_lemmas_normed(now,target,kkma):
 
 def binary_adjacent_sentence_overlap_adjective_lemmas(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -788,8 +788,8 @@ def binary_adjacent_sentence_overlap_adjective_lemmas(now,target,kkma):
 
 def adjacent_two_sentence_overlap_adjective_lemmas(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
 
     sum = 0
@@ -817,8 +817,8 @@ def adjacent_two_sentence_overlap_adjective_lemmas(now,target1,target2,kkma):
 
 def adjacent_two_sentence_overlap_adjective_lemmas_normed(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -848,8 +848,8 @@ def adjacent_two_sentence_overlap_adjective_lemmas_normed(now,target1,target2,kk
 
 def binary_adjacent_two_sentence_overlap_adjective_lemmas(now,target1, target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -881,7 +881,7 @@ def binary_adjacent_two_sentence_overlap_adjective_lemmas(now,target1, target2,k
 #adverb lemmas
 def adjacent_sentence_overlap_adverb_lemmas(now, target, kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
     sum = 0
 
@@ -901,7 +901,7 @@ def adjacent_sentence_overlap_adverb_lemmas(now, target, kkma):
 
 def adjacent_sentence_overlap_adverb_lemmas_normed(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -918,7 +918,7 @@ def adjacent_sentence_overlap_adverb_lemmas_normed(now,target,kkma):
 
 def binary_adjacent_sentence_overlap_adverb_lemmas(now,target,kkma):
     pos_now = kkma.pos(now)
-    pos_target = kkma.pos(target)
+    target = kkma.pos(target)
     lemma = collections.defaultdict()
 
     for item in pos_now:
@@ -935,8 +935,8 @@ def binary_adjacent_sentence_overlap_adverb_lemmas(now,target,kkma):
 
 def adjacent_two_sentence_overlap_adverb_lemmas(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
 
     sum = 0
@@ -964,8 +964,8 @@ def adjacent_two_sentence_overlap_adverb_lemmas(now,target1,target2,kkma):
 
 def adjacent_two_sentence_overlap_adverb_lemmas_normed(now,target1,target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
@@ -995,8 +995,8 @@ def adjacent_two_sentence_overlap_adverb_lemmas_normed(now,target1,target2,kkma)
 
 def binary_adjacent_two_sentence_overlap_adverb_lemmas(now,target1, target2,kkma):
     pos_now = kkma.pos(now)
-    pos_target1 = kkma.pos(target1)
-    pos_target2 = kkma.pos(target2)
+    target1 = kkma.pos(target1)
+    target2 = kkma.pos(target2)
     lemma = collections.defaultdict()
     flag = False
 
