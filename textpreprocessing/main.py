@@ -33,6 +33,10 @@ if __name__=="__main__":
         #lemmazation
         wordsAfterLemma=textpreprocess.lemma(words)
 
+        #similar
+        model=similarity.model()
+        similarity.similar(sentences,model)
+
         #TTR
             #lemmattr
         result['lemmattr']=TTR.lemmaTtr(wordsAfterLemma)
