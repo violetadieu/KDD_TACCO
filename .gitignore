@@ -1,2 +1,5 @@
 textpreprocessing/outputs
-sentence_transformers
+sts/sentence_transformers
+sts/dataset
+sts/model
+sts/outputs
