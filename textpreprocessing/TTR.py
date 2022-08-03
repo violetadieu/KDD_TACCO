@@ -164,8 +164,10 @@ def advTtr(words,kkma):
             if "MAG" in morp[1] or "MAJ" in morp[1]:
                 type[morp[0]] = type[morp[0]] + 1
                 totalCnt += 1
-
-    return len(type) / totalCnt
+    if totalCnt==0:
+        return 0
+    else:
+        return len(type) / totalCnt
 
 #대명사는 나중에~
 def prpTtr(words,kkma):

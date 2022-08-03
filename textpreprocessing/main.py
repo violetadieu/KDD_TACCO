@@ -18,12 +18,14 @@ if __name__=="__main__":
     #data 가저오기
     data=pd.read_csv("data/일반.csv")
     data=data["text"].to_list()
+    res = pd.DataFrame()
 
     kkma=Kkma()
 
-    for text in data:
+    for text in data[:10]:
         result=collections.defaultdict()
-
+        #원문
+        result['sentence']=text
         #text 전처리
         #문장 나누기
         sentences=textpreprocess.splitText(text)
@@ -306,11 +308,11 @@ if __name__=="__main__":
                                                                                        sentences[idx + 2], kkma)
 
 
-        p1=pd.DataFrame([result])
-        print(p1)
-        p1.to_csv("test.csv",encoding="utf-8-sig")
+        iter=pd.DataFrame([result])
+        res=res.append(iter)
+    res.to_csv("result.csv",encoding="utf-8-sig")
 
-        print("end")
+    print("end")
         #connectives
 
         #기타(LSA, LDA, word2vec)
