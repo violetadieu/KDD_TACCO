@@ -14,6 +14,11 @@ import adjacent_overlap
 #import similarity
 import synonym
 
+#대명사 목록, 지시대명사 -> 인칭대명사 순서
+pronounList=['이','그','저','이것','그것','저것','무엇','여기','저기','거기','어디',
+        '저희','본인','그대','귀하','너희','당신','여러분','임자','자기','자네','이런',
+         '그들','그녀','당신','저희','놈','얘','걔','쟤','누구']
+
 if __name__=="__main__":
     #data 가저오기
     data=pd.read_csv("data/일반.csv")
@@ -55,6 +60,7 @@ if __name__=="__main__":
             #functionMattr
         result['functionMattr']=TTR.functionMattr(wordsAfterLemma,kkma)
             #nounTtr
+        #uniqueNoun,nounNum,
         result['nounTtr']=TTR.nounTtr(wordsAfterLemma,kkma)
             #verbTtr
         result['verbTtr'] = TTR.verbTtr(wordsAfterLemma, kkma)
@@ -62,10 +68,10 @@ if __name__=="__main__":
         result['adjTtr'] = TTR.adjTtr(wordsAfterLemma, kkma)
             #advTtr
         result['advTtr'] = TTR.advTtr(wordsAfterLemma, kkma)
-            #prpTtr 대명사는 나중에~
-        result['prpTtr'] = TTR.prpTtr(wordsAfterLemma, kkma)
+            #prpTtr
+        #uniquePronoun,pronounNum, result['prpTtr'] = TTR.prpTtr(wordsAfterLemma, kkma,pronounList)
             #argumentTtr 대명사는 나중에~
-        result['argumentTtr'] = TTR.argumentTtr(wordsAfterLemma, kkma)
+        #result['argumentTtr'] = TTR.argumentTtr(wordsAfterLemma, kkma,uniquePronoun)
             #advTtr
         result['bigramLemmaTtr'] = TTR.bigramLemmaTtr(wordsAfterLemma)
             #advTtr
@@ -310,7 +316,7 @@ if __name__=="__main__":
 
         iter=pd.DataFrame([result])
         res=res.append(iter)
-    res.to_csv("result.csv",encoding="utf-8-sig")
+    res.to_csv("고등.csv",encoding="utf-8-sig")
 
     print("end")
         #connectives

@@ -169,13 +169,42 @@ def advTtr(words,kkma):
     else:
         return len(type) / totalCnt
 
-#대명사는 나중에~
-def prpTtr(words,kkma):
-    return 0
+#대명사
+def prpTtr(words,kkma,pronounList):
+    pronounNum=0
+    type = collections.defaultdict(int)
+
+    lemma=kkma.pos(words)
+
+    oneLetterPronounFlag = False
+
+    for pron in pronounList:
+
+        for i, word in enumerate(lemma):
+
+            # 이 책, 이 사람, 저 때 등 이,그,저 + @인 경우
+            if oneLetterPronounFlag == True:
+                oneLetterPronounFlag = False
+                type[word] = type[word] + 1
+                pronounNum+=1
+                continue
+
+            # 대명사를 내포하는지 체크 또한 접속사일 경우 제외
+            if word[0:len(pron)] == pron:
+                type[word] = type[word]+1
+                pronounNum+=1
+
+            # 단 '이', '그', '저'는 한글자로만 사용되므로 예외
+            elif (pron == '이' and word == '이') or (pron == '그' and word == '그') or (pron == '저' and word == '저'):
+                oneLetterPronounFlag = True
+
+
+    return len(type),pronounNum, len(type)/pronounNum
 
 #명사와 대명사, 대명사는 나중에~
-def argumentTtr(words,kkma):
-    return 0
+def argumentTtr(uniqueNoun,nounNum,uniquePronoun,pronounNum):
+
+    return (uniquePronoun+uniqueNoun)/(nounNum+pronounNum)
 
 
 def bigramLemmaTtr(words):
