@@ -3,3 +3,4 @@ sts/sentence_transformers
 sts/dataset
 sts/model
 sts/outputs
+sts/data
