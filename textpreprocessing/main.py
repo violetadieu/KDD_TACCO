@@ -19,30 +19,50 @@ pronounList=['이','그','저','이것','그것','저것','무엇','여기','저
         '저희','본인','그대','귀하','너희','당신','여러분','임자','자기','자네','이런',
          '그들','그녀','당신','저희','놈','얘','걔','쟤','누구']
 
+def conjuctions(kkma,wordsAfterLemma):
+    type = collections.defaultdict(int)
+    totalCnt = 0
+
+    for word in words:
+        pos = kkma.pos(word)
+        for morp in pos:
+            if morp[1]=="MAG":
+                type[morp[0]] = type[morp[0]] + 1
+                totalCnt += 1
+    if totalCnt==0:
+        return 0
+    return len(type) / totalCnt
+
 if __name__=="__main__":
     #data 가저오기
-    data=pd.read_csv("data/일반.csv")
+    data=pd.read_csv("data/고등.csv")
     data=data["text"].to_list()
     res = pd.DataFrame()
 
     kkma=Kkma()
 
-    for text in data[:10]:
+    for text in data[:]:
         result=collections.defaultdict()
         #원문
         result['sentence']=text
         #text 전처리
         #문장 나누기
-        sentences=textpreprocess.splitText(text)
+        try:
+            sentences=textpreprocess.splitText(text)
+        except:
+            continue
         #단어 나누기
         words=textpreprocess.splitSen(sentences)
 
         #lemmazation
         wordsAfterLemma=textpreprocess.lemma(words)
-
+        result['lemmaCnt']=len(wordsAfterLemma)
         #similar
         #model=similarity.model()
         #similarity.similar(sentences,model)
+
+        #conjuctions
+        result['conjuctions']=conjuctions(kkma,wordsAfterLemma)
 
         #TTR
             #lemmattr
@@ -58,7 +78,7 @@ if __name__=="__main__":
             #functionTtr
         result['functionTtr']=TTR.functionTtr(wordsAfterLemma,kkma)
             #functionMattr
-        result['functionMattr']=TTR.functionMattr(wordsAfterLemma,kkma)
+        #result['functionMattr']=TTR.functionMattr(wordsAfterLemma,kkma)
             #nounTtr
         #uniqueNoun,nounNum,
         result['nounTtr']=TTR.nounTtr(wordsAfterLemma,kkma)
@@ -316,7 +336,7 @@ if __name__=="__main__":
 
         iter=pd.DataFrame([result])
         res=res.append(iter)
-    res.to_csv("고등.csv",encoding="utf-8-sig")
+    res.to_csv("고등_result.csv",encoding="utf-8-sig")
 
     print("end")
         #connectives

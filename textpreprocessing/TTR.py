@@ -20,12 +20,15 @@ def lemmaMattr(words):
     while idx <= len(words):
         types = collections.defaultdict(int)
         ttrList = words[idx:idx + 50]
+        if len(ttrList)==0:
+            return 0
         for word in ttrList:
             types[word] = types[word] + 1
         cnt += 1
         ttr += len(types) / len(ttrList)
         idx += 50
-
+    if cnt==0:
+        return 0
     return ttr / cnt
 
 
@@ -151,7 +154,8 @@ def adjTtr(words,kkma):
             if "VXA" in morp[1] or "VA" in morp[1]:
                 type[morp[0]] = type[morp[0]] + 1
                 totalCnt += 1
-
+    if totalCnt==0:
+        return 0
     return len(type) / totalCnt
 
 def advTtr(words,kkma):
