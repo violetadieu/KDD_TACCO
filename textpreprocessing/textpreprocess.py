@@ -1,6 +1,5 @@
 import collections
 import re
-from hanspell import spell_checker
 from konlpy.tag import Kkma
 
 # text 문장 단위 분할하기
@@ -8,8 +7,7 @@ def splitText(text):
     sens=collections.deque()
     sentences = re.split('\. |\? |\!', text)
     for item in sentences:
-        spellChk = spell_checker.check(item).checked
-        sens.append(spellChk)
+        sens.append(item)
 
     return sens
 

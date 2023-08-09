@@ -38,11 +38,11 @@ def lexicalDensityTokens(words, kkma):
     totalCnt = 0
 
     for word in words:
-        pos = kkma.pos(word)
-        for morp in pos:
-            totalCnt += len(pos)
-            if "NN" in morp[1] or "V" in morp[1] or "MA" in morp[1]:
-                cnt += 1
+        morp = kkma.pos(word)
+        #for morp in pos:
+        totalCnt += 1
+        if "NN" in morp[1] or "V" in morp[1] or "MA" in morp[1]:
+            cnt += 1
 
     return cnt / totalCnt
 
@@ -53,11 +53,11 @@ def lexicalDensityTypes(words, kkma):
     totalCnt = 0
 
     for word in words:
-        pos = kkma.pos(word)
-        for morp in pos:
-            totalCnt += len(pos)
-            if "NN" in morp[1] or "V" in morp[1] or "MA" in morp[1]:
-                type[morp[0]] = type[morp[0]] + 1
+        morp = kkma.pos(word)
+        #for morp in pos:
+        totalCnt += 1
+        if "NN" in morp[1] or "V" in morp[1] or "MA" in morp[1]:
+            type[morp[0]] = type[morp[0]] + 1
 
     return len(type) / totalCnt
 
@@ -67,14 +67,14 @@ def contentTtr(words, kkma):
     totalCnt = 0
 
     for word in words:
-        pos = kkma.pos(word)
-        for morp in pos:
-            if "NN" in morp[1] or "V" in morp[1] or "MA" in morp[1]:
-                try:
-                    type[morp[0]] = type[morp[0]] + 1
-                except:
-                    type[morp[0]]=0
-                totalCnt += 1
+        morp = kkma.pos(word)
+        #for morp in pos:
+        if "NN" in morp[1] or "V" in morp[1] or "MA" in morp[1]:
+            try:
+                type[morp[0]] = type[morp[0]] + 1
+            except:
+                type[morp[0]]=0
+            totalCnt += 1
 
     return len(type) / totalCnt
 
@@ -84,11 +84,11 @@ def functionTtr(words,kkma):
     totalCnt = 0
 
     for word in words:
-        pos = kkma.pos(word)
-        for morp in pos:
-            if ("J" in morp[1] or "E" in morp[1]) and(morp[1]!="MAJ" or morp[1]!="SE"):
-                type[morp[0]] = type[morp[0]] + 1
-                totalCnt += 1
+        morp = kkma.pos(word)
+        #for morp in pos:
+        if ("J" in morp[1] or "E" in morp[1]) and(morp[1]!="MAJ" or morp[1]!="SE"):
+            type[morp[0]] = type[morp[0]] + 1
+            totalCnt += 1
 
     return len(type) / totalCnt
 
@@ -105,11 +105,11 @@ def functionMattr(words,kkma):
         leng=0
         ttrList = words[idx:idx + 50]
         for word in ttrList:
-            pos = kkma.pos(word)
-            leng+=len(pos)
-            for morp in pos:
-                if ("J" in morp[1] or "E" in morp[1]) and (morp[1] != "MAJ" or morp[1] != "SE"):
-                    type[morp[0]] = type[morp[0]] + 1
+            morp = kkma.pos(word)
+            leng+=1
+            #for morp in pos:
+            if ("J" in morp[1] or "E" in morp[1]) and (morp[1] != "MAJ" or morp[1] != "SE"):
+                type[morp[0]] = type[morp[0]] + 1
         cnt += 1
         ttr += len(type) / leng
         idx += 50
@@ -122,11 +122,11 @@ def nounTtr(words,kkma):
     totalCnt = 0
 
     for word in words:
-        pos = kkma.pos(word)
-        for morp in pos:
-            if "N" in morp[1] and morp[1] != "ON":
-                type[morp[0]] = type[morp[0]] + 1
-                totalCnt += 1
+        morp = kkma.pos(word)
+        #for morp in pos:
+        if "N" in morp[1] and morp[1] != "ON":
+            type[morp[0]] = type[morp[0]] + 1
+            totalCnt += 1
 
     return len(type) / totalCnt
 
@@ -135,11 +135,11 @@ def verbTtr(words,kkma):
     totalCnt = 0
 
     for word in words:
-        pos = kkma.pos(word)
-        for morp in pos:
-            if "V" in morp[1] and (morp[1] != "XPV" or morp[1] != "XSV"):
-                type[morp[0]] = type[morp[0]] + 1
-                totalCnt += 1
+        morp = kkma.pos(word)
+        #for morp in pos:
+        if "V" in morp[1] and (morp[1] != "XPV" or morp[1] != "XSV"):
+            type[morp[0]] = type[morp[0]] + 1
+            totalCnt += 1
 
     return len(type) / totalCnt
 
@@ -149,11 +149,11 @@ def adjTtr(words,kkma):
     totalCnt = 0
 
     for word in words:
-        pos = kkma.pos(word)
-        for morp in pos:
-            if "VXA" in morp[1] or "VA" in morp[1]:
-                type[morp[0]] = type[morp[0]] + 1
-                totalCnt += 1
+        morp = kkma.pos(word)
+        #for morp in pos:
+        if "VXA" in morp[1] or "VA" in morp[1]:
+            type[morp[0]] = type[morp[0]] + 1
+            totalCnt += 1
     if totalCnt==0:
         return 0
     return len(type) / totalCnt
@@ -163,11 +163,11 @@ def advTtr(words,kkma):
     totalCnt = 0
 
     for word in words:
-        pos = kkma.pos(word)
-        for morp in pos:
-            if "MAG" in morp[1] or "MAJ" in morp[1]:
-                type[morp[0]] = type[morp[0]] + 1
-                totalCnt += 1
+        morp = kkma.pos(word)
+        #for morp in pos:
+        if "MAG" in morp[1] or "MAJ" in morp[1]:
+            type[morp[0]] = type[morp[0]] + 1
+            totalCnt += 1
     if totalCnt==0:
         return 0
     else:
@@ -205,7 +205,6 @@ def prpTtr(words,kkma,pronounList):
 
     return len(type),pronounNum, len(type)/pronounNum
 
-#명사와 대명사, 대명사는 나중에~
 def argumentTtr(uniqueNoun,nounNum,uniquePronoun,pronounNum):
 
     return (uniquePronoun+uniqueNoun)/(nounNum+pronounNum)
